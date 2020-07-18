@@ -1,0 +1,27 @@
+.purple {
+    color: rgb(150, 27, 129);
+}
+.bg-purple {
+    background-color: rgb(150, 27, 129);
+}
+.orange {
+   color: rgb(232, 78, 28);
+}
+.bg-orange {
+    background-color: rgb(232, 78, 28);
+
+}
+.blue {
+   color: rgb(0, 159, 227);
+}
+.bg-blue {
+    background-color: rgb(0, 159, 227);
+}
+/* INDEX */
+.index-image-button{
+    opacity: 0.6;
+}
+.index-image-button:hover{
+    opacity: 1;
+    margin-top: 5px;
+}
