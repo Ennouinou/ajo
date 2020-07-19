@@ -5,7 +5,6 @@
         <div class="container">
             <div class="row">
 
-
                 <div class="col-md-6 widget">
                     <h3 class="widget-title">Text widget</h3>
                     <div class="widget-body">
@@ -46,9 +45,9 @@
                         <p class="simplenav">
                             <a href="/">Home</a> |
                             <a href="/about">About</a> |
-                            <a href="sidebar-right.blade.php">Sidebar</a> |
-                            <a href="contact.blade.php">Contact</a> |
-                            <b><a href="signup.blade.php">Sign up</a></b>
+                            <a href="/sidebar-right">Sidebar</a> |
+                            <a href="/contact">Contact</a> |
+                            <b><a href="/signup">Sign up</a></b>
                         </p>
                     </div>
                 </div>
@@ -61,7 +60,7 @@
                     </div>
                 </div>
 
-            </div> <!-- /row of widgets -->
+            </div>
         </div>
     </div>
 
