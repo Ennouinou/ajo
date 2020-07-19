@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-    <!-- Header -->
     <header id="head">
         <div class="container">
             <div class="row">
@@ -10,24 +9,17 @@
             </div>
         </div>
     </header>
-    <!-- /Header -->
-
-    <!-- Intro -->
     <div class="container text-center">
         <br> <br>
         <h2 class="thin"><span class="purple">A</span><span class="blue">J</span><span class="orange">O</span></h2>
         <p class="text-muted">
             Association fondée dans le but d'améliorer tout travail associatif, artistique culturel et social en guise de venir en aide à tous les jeunes.
         </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <!-- /Intro-->
-
-    <!-- Highlights - jumbotron -->
     <div class="jumbotron top-space">
         <div class="container">
-
             <h3 class="text-center thin orange">Principes :</h3>
-
             <div class="row">
                 <div class="col-md-3 col-sm-6 highlight">
                     <div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>Créativité</h4></div>
@@ -53,13 +45,9 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, excepturi, maiores, dolorem quasi reprehenderit illo accusamus nulla minima repudiandae quas ducimus reiciendis odio sequi atque temporibus facere corporis eos expedita? </p>
                     </div>
                 </div>
-            </div> <!-- /row  -->
-
+            </div>
         </div>
     </div>
-    <!-- /Highlights -->
-
-    <!-- container -->
     <div class="container">
         <h2 class="text-center top-space orange">Nos activités généralement tournent autour des :</h2>
         <br>
@@ -90,7 +78,6 @@
                 </p>
             </div>
         </div>
-
         <div class="row">
             <div class="page-header">
                 <h1 id="timeline" class="orange text-center">Coming Soon</h1>
@@ -98,7 +85,7 @@
             <ul class="timeline">
             @foreach($events as $event)
                     <li class="{{$loop->index%2 == 0 ? '' : 'timeline-inverted'}}">
-                        <div class="timeline-badge" style="background-color: rgb(150, 27, 129)"></div>
+                        <div class="timeline-badge" ><img src="{{URL::to('/')}}/assets/images/mini-logo.png" alt=""></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="timeline-title">{{ $event->title }}</h4>
@@ -111,14 +98,14 @@
                     </li>
             @endforeach
                 <li>
-                    <div class="timeline-badge danger"><i class="fa fa-plus"></i></div>
+                    <div class="timeline-badge  more-events" onclick="route('/events')"><i class="fa fa-plus"></i></div>
                 </li>
             </ul>
         </div>
-        <div class="jumbotron top-space">
-            <h4>Dicta, nostrum nemo soluta sapiente sit dolor quae voluptas quidem doloribus recusandae facere magni ullam suscipit sunt atque rerum eaque iusto facilis esse nam veniam incidunt officia perspiciatis at voluptatibus. Libero, aliquid illum possimus numquam fuga.</h4>
-            <p class="text-right"><a class="btn bg-purple orange index-image-button">Details »</a></p>
+        <div class="jumbotron top-space douich">
+            <img  src="{{URL::to('/')}}/assets/images/douich.jpg" alt="">
+            <blockquote class="quote"> <i class="fa fa-quote-left blue"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at, cupiditate dolorem explicabo id unde. A alias blanditiis, ea eaque et explicabo iusto nemo nesciunt nihil sint vel voluptas?</blockquote>
+            <p class="text-right"><a class="btn bg-purple orange index-image-button">Membres du bureau »</a></p>
         </div>
-    </div>	<!-- /container -->
-
+    </div>
 @endsection

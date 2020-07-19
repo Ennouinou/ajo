@@ -23,3 +23,9 @@ Route::get('/contact', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+
+Route::get('/sidebar-left', function () {
+    return view('sidebar-left');
+});
+Route::resource('/events','EventController');
+
