@@ -14,8 +14,6 @@
                 <h3>Président</h3>
                 <p><img src="assets/images/douich.jpg" alt="" class="img-rounded pull-right" width="300" > Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, consequuntur eius repellendus eos aliquid molestiae ea laborum ex quibusdam laudantium voluptates placeat consectetur quam aliquam beatae soluta accusantium iusto nihil nesciunt unde veniam magnam repudiandae sapiente.</p>
                 <p>Quos, aliquam nam velit impedit minus tenetur beatae voluptas facere sint pariatur! Voluptatibus, quisquam, error, est assumenda corporis inventore illo nesciunt iure aut dolor possimus repellat minima veniam alias eius!</p>
-                <h3>Necessitatibus</h3>
-                <p>Eum, quasi, est, vitae, ipsam nobis consectetur ea aspernatur ad eos voluptatibus fugiat nisi perferendis impedit. Quam, nulla, excepturi, voluptate minus illo tenetur sint ab in culpa cumque impedit quibusdam. Saepe, molestias quia voluptatem natus velit fugiat omnis rem eos sapiente quasi quaerat aspernatur quisquam deleniti accusantium laboriosam odio id?</p>
 
             </article>
             <!-- /Article -->
@@ -33,9 +31,47 @@
                 </div>
 
             </aside>
-            <!-- /Sidebar -->
+            <div class="team-section text-center my-5 w-97 m-auto" id="team">
+                <h2 class="h1-responsive font-weight-bold my-5">Membres du bureau</h2>
+                <p class="grey-text w-responsive mx-auto mb-5">BLA BLA BLA </p>
+                <div class="row" >
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="avatar mx-auto">
+                            <img src="{{URL::to('/')}}/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
+                                 alt="Photo of ">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3">test</h5>
+                        <p class="text-uppercase blue-text"><strong>test test</strong></p>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, animi aspernatur consequatur nisi quidem repellat temporibus. Cupiditate eaque id quo. Ab eligendi id laboriosam nam non provident quaerat sint vero?</p>
+                        <ul class="list-unstyled mb-2">
+                            <a class="p-2 fa-lg tw-ic" href="">
+                                <i class="fa fa-facebook blue-text"></i>
+                            </a>
+                            <a class="p-2 fa-lg ins-ic" href="">
+                                <i class="fa fa-linkedin blue-text"></i>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
+                        <div class="avatar mx-auto">
+                            <img src="{{URL::to('/')}}/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
+                                 alt="Photo of ">
+                        </div>
+                        <h5 class="font-weight-bold mt-4 mb-3">test</h5>
+                        <p class="text-uppercase blue-text"><strong>test test</strong></p>
+                        <p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, animi aspernatur consequatur nisi quidem repellat temporibus. Cupiditate eaque id quo. Ab eligendi id laboriosam nam non provident quaerat sint vero?</p>
+                        <ul class="list-unstyled mb-2">
+                            <a class="p-2 fa-lg tw-ic" href="">
+                                <i class="fa fa-linkedin blue-text"></i>
+                            </a>
+                            <a class="p-2 fa-lg ins-ic" href="">
+                                <i class="fa fa-github blue-text"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
         </div>
-    </div>	<!-- /container -->
-
+    </div>
 @endsection
