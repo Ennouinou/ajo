@@ -1,5 +1,5 @@
 <!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
+<div class="navbar navbar-inverse navbar-fixed-top headroom " >
     <div class="container">
         <div class="navbar-header">
             <!-- Button for smallest screens -->

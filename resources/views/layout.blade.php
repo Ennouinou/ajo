@@ -20,7 +20,6 @@
     <!--[if lt IE 9] -->
     <script src="{{URL::to('/')}}/assets/js/html5shiv.js"></script>
     <script src="{{URL::to('/')}}/assets/js/respond.min.js"></script>
-    <script src="{{URL::to('/')}}/assets/app/js/main.js"></script>
     <![endif]-->
 </head>
 <body class="home">
@@ -31,21 +30,7 @@
     <span>
         @yield('content')
     </span>
-{{-- Space --}}
-    <section id="social">
-        <div class="container">
-            <div class="wrapper clearfix">
-                <!-- AddThis Button BEGIN -->
-                <div class="addthis_toolbox addthis_default_style">
-                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                    <a class="addthis_button_tweet"></a>
-                    <a class="addthis_button_linkedin_counter"></a>
-                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                </div>
-                <!-- AddThis Button END -->
-            </div>
-        </div>
-    </section>
+
 @include('skeleton.footer')
 
 <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
@@ -54,5 +39,8 @@
 <script src="{{URL::to('/')}}/assets/js/headroom.min.js"></script>
 <script src="{{URL::to('/')}}/assets/js/jQuery.headroom.min.js"></script>
 <script src="{{URL::to('/')}}/assets/js/template.js"></script>
+<script src="{{URL::to('/')}}/assets/app/js/main.js"></script>
+<script src="{{URL::to('/')}}/assets/app/js/counter.js"></script>
+
 </body>
 </html>

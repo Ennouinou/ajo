@@ -107,5 +107,34 @@
             <blockquote class="quote"> <i class="fa fa-quote-left blue"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at, cupiditate dolorem explicabo id unde. A alias blanditiis, ea eaque et explicabo iusto nemo nesciunt nihil sint vel voluptas?</blockquote>
             <p class="text-right"><a class="btn bg-purple orange index-image-button">Membres du bureau »</a></p>
         </div>
-    </div>
+            <div class="row">
+                <br/>
+                <div class="col text-center">
+                    <h2><span class="purple">A</span><span class="blue">J</span><span class="orange">O</span> en chiffres</h2>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="counter">
+                        <i class="fa fa-code fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="100" data-speed="1500"></h2>
+                        <p class="count-text ">Familles</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter">
+                        <i class="fa fa-users fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="1700" data-speed="1500"></h2>
+                        <p class="count-text ">Membres</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="counter">
+                        <i class="fa fa-calendar-o fa-2x"></i>
+                        <h2 class="timer count-title count-number" data-to="11900" data-speed="1500"></h2>
+                        <p class="count-text ">Evenements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection
