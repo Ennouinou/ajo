@@ -28,4 +28,5 @@ Route::get('/sidebar-left', function () {
     return view('sidebar-left');
 });
 Route::resource('/events','EventController');
+Route::resource('/posts','PostController');
 

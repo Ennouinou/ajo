@@ -18,7 +18,7 @@
                 </header>
 
                 <p>
-                    We’d love to hear from you. Interested in working together? Fill out the form below with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquid aperiam blanditiis cum cupiditate eos est fugit iusto maiores maxime minima nisi nobis qui quos repellendus sed sunt temporibus, veniam?
                 </p>
                 <br>
                 <form>
@@ -58,11 +58,11 @@
                 <div class="widget">
                     <h4>Address</h4>
                     <address>
-                        2002 Holcombe Boulevard, Houston, TX 77030, USA
+                        ASWAK SALAM
                     </address>
                     <h4>Phone:</h4>
                     <address>
-                        (713) 791-1414
+                        0624052011
                     </address>
                 </div>
             </aside>
