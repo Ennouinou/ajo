@@ -227,7 +227,8 @@ Counter
     background-color: white;
 }
 /*
-TEAM
+Home-NEWS
  */
-.avatar {
+.news {
+    border-right: 1px solid  rgb(0, 159, 227) ;
 }

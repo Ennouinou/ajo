@@ -55,7 +55,6 @@
 
             <!-- Sidebar -->
             <aside class="col-sm-3 sidebar sidebar-right">
-
                 <div class="widget">
                     <h4>Address</h4>
                     <address>
@@ -66,7 +65,6 @@
                         (713) 791-1414
                     </address>
                 </div>
-
             </aside>
             <!-- /Sidebar -->
 

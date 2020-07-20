@@ -10,12 +10,29 @@
         </div>
     </header>
     <div class="container text-center">
-        <br> <br>
-        <h2 class="thin"><span class="purple">A</span><span class="blue">J</span><span class="orange">O</span></h2>
-        <p class="text-muted">
-            Association fondée dans le but d'améliorer tout travail associatif, artistique culturel et social en guise de venir en aide à tous les jeunes.
-        </p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <div class="row">
+            <div class="col-md-8 news">
+                <br>
+                <h2 class="thin"><span class="purple">A</span><span class="blue">J</span><span class="orange">O</span></h2>
+                <p class="text-muted">
+                    Association fondée dans le but d'améliorer tout travail associatif, artistique culturel et social en guise de venir en aide à tous les jeunes.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <aside class="col-md-4 sidebar sidebar-right " >
+                <h2 class="thin orange">Dernières Actualités</h2>
+                <div class="widget text-left">
+                    <ul class="list-unstyled list-spaces">
+                        <li><a href="">Actualités1 </a><br><span class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, laborum.</span></li>
+                        <li><a href="">Actualités2 </a><br><span class="small text-muted">Suscipit veniam debitis sed ipsam quia magnam eveniet perferendis nisi.</span></li>
+                        <li><a href="">Actualités3 </a><br><span class="small text-muted">Reprehenderit illum quod unde quo vero ab inventore alias veritatis.</span></li>
+                        <li><a href="">Actualités4  </a><br><span class="small text-muted">Sed, mollitia earum debitis est itaque esse reiciendis amet cupiditate.</span></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
     </div>
     <div class="jumbotron top-space">
         <div class="container">
