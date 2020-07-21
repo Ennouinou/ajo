@@ -5,7 +5,7 @@
             <div class="row">
                 <h1 class="lead" >Association des Jeunes de L'ouverture - جمعية شباب الإنفتاح </h1>
                 <p class="tagline"> Organisation à but non lucratif </p>
-                <p><a class="btn bg-purple orange index-image-button"  role="button">Qui sommes-nous ?</a> <a class="btn bg-purple blue  index-image-button" role="button">Aidez-Nous</a></p>
+                <p><a class="btn bg-purple orange index-image-button"  role="button">Rejoignez nous ?</a> <a class="btn bg-purple blue  index-image-button" role="button">Aidez-Nous</a></p>
             </div>
         </div>
     </header>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEventsTable extends Migration
+class CreatePostAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('post_attachments', function (Blueprint $table) {
             $table->id();
-            $table->string('title',50);
-            $table->text('description');
-            $table->string('activity');
-            $table->dateTime('date');
+            $table->string('type',1);
+            $table->string('value');
+            $table->bigInteger('post_id')->unsigned();
+
+            $table->foreign('post_id')->references('id')->on('posts');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateEventsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('post_attachments');
     }
 }
