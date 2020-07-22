@@ -18,7 +18,7 @@
                 <p class="text-muted">
                     Association fondée dans le but d'améliorer tout travail associatif, artistique culturel et social en guise de venir en aide à tous les jeunes.
                 </p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="90%" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <aside class="col-md-4 sidebar sidebar-right " >
                 <h2 class="thin orange">Dernières Actualités</h2>
