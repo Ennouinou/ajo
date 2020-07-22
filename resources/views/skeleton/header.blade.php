@@ -20,7 +20,20 @@
                     </ul>
                 </li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a class="btn" href="signin.blade.php">SIGN IN / SIGN UP</a></li>
+                @if (!Auth::check())
+                    <li><a class="btn" href="/login"><i class="fa fa-sign-in"></i> </a></li>
+                @else
+                    <li><a href="/administration">Administration</a></li>
+                    <a class="btn" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                        <i class="fa fa-sign-out"></i>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                @endif
+
             </ul>
         </div><!--/.nav-collapse -->
     </div>

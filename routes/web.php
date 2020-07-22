@@ -1,5 +1,8 @@
 <?php
 
+use App\Event;
+use App\Post;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@home')->name('home');
+Route::get('/', function(){
+    $now =Carbon::now();
+    $events = Event::all()->where('date', '>=', $now->toDateTimeString());
+    $posts = Post::all();
+    return view('index',[
+        'events' => $events,
+        'posts'  => $posts,
+    ]);
+});
 Route::get('/about', function () {
     return view('about');
 });
@@ -23,6 +34,9 @@ Route::get('/contact', function () {
 Route::get('/signup', function () {
     return view('signup');
 });
+Route::get('/administration', function () {
+    return view('dashboard.index');
+});
 
 Route::get('/sidebar-left', function () {
     return view('sidebar-left');
@@ -30,3 +44,11 @@ Route::get('/sidebar-left', function () {
 Route::resource('/events','EventController');
 Route::resource('/posts','PostController');
 
+
+Auth::routes();
+
+Route::get('/administration', 'HomeController@index')->name('dashboard');
+
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function (){
+    Route::resource('/users','UsersController');
+});
