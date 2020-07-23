@@ -31,8 +31,8 @@
                 <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="/dashboard/posts">Liste des articles</a>
-                        <a class="nav-link" href="#">Mes articles</a>
-                        <a class="nav-link" href="#">Ajouter un article</a>
+                        <a class="nav-link" href="/dashboard/myPosts">Mes articles</a>
+                        <a class="nav-link" href="{{route('dashboard.posts.create')}}">Ajouter un article</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts">

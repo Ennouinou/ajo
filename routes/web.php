@@ -52,4 +52,6 @@ Route::get('/administration', 'HomeController@index')->name('dashboard');
 Route::namespace('Dashboard')->prefix('dashboard')->name('dashboard.')->group(function (){
     Route::resource('/users','UsersController');
     Route::resource('/posts','PostController');
+    Route::get('/myPosts','PostController@myIndex')->name('myPosts');
+
 });
