@@ -3,11 +3,15 @@
         <div class="sb-sidenav-menu">
             <div class="nav">
                 <div class="sb-sidenav-menu-heading">Core</div>
+                <a class="nav-link" href="/">
+                    <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
+                    Home
+                </a>
                 <a class="nav-link" href="/administration">
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     Dashboard
                 </a>
-                <div class="sb-sidenav-menu-heading">Interface</div>
+                <div class="sb-sidenav-menu-heading">Gestion</div>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                     <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
                     Evenements
@@ -26,7 +30,7 @@
                 </a>
                 <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">Liste des articles</a>
+                        <a class="nav-link" href="/dashboard/posts">Liste des articles</a>
                         <a class="nav-link" href="#">Mes articles</a>
                         <a class="nav-link" href="#">Ajouter un article</a>
                     </nav>
@@ -38,8 +42,10 @@
                 </a>
                 <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">Liste des utilisateurs</a>
-                        <a class="nav-link" href="#">Ajouter un utilisateur</a>
+                        <a class="nav-link" href="/dashboard/users">Liste des utilisateurs</a>
+                        @if (Auth::user()->role == 1)
+                            <a class="nav-link" href="#">Ajouter un utilisateur</a>
+                        @endif
                     </nav>
                 </div>
                 <div class="sb-sidenav-menu-heading">Addons</div>
