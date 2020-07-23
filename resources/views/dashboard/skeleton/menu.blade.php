@@ -27,6 +27,7 @@
                 <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="#">Liste des articles</a>
+                        <a class="nav-link" href="#">Mes articles</a>
                         <a class="nav-link" href="#">Ajouter un article</a>
                     </nav>
                 </div>
