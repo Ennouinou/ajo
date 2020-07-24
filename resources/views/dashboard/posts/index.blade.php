@@ -31,7 +31,7 @@
                                 <td>____</td>
                             @endif
                             <td>{{$post->user->name}}</td>
-                            <td>{{$post->created_at->diffForHumans()}}</td>
+                            <td>{{$post->created_at}}</td>
                         </tr>
                     @endforeach
                     </tbody>
