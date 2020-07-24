@@ -45,13 +45,14 @@
                             Videos : <a class="btn btn-primary mt-1" onclick="createVideoInput()"><i class="fa fa-plus"></i></a>
                         </label>
                         <span id="videos">
-                    </span>
+                        </span>
                     </div>
                     <div class="form-group">
                         <label for="attachments">
-                            Images :<a class="btn btn-primary mt-1"><i class="fa fa-plus"></i></a>
+                            Images :<a class="btn btn-primary mt-1" onclick="createImageInput()"><i class="fa fa-plus"></i></a>
                         </label>
-                        <input type="file" class="form-control" name="image" id="image">
+                        <span id="images">
+                        </span>
                     </div>
                 </fieldset>
 

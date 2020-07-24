@@ -89,20 +89,24 @@ class PostController extends Controller
         /*
          * Images
          */
-        if ($request->image != null) {
-            $image = $request->image;
-            $name = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/assets/images/posts');
-            $image->move($destinationPath, $name);
-            $post_attachments = new PostAttachment();
-            $post_attachments->type = "f";
-            $post_attachments->value = $name;
-            $post_attachments->post_id = $post_id;
-            $post_attachments->save();
+        if(is_array($request->image)){
+            foreach ($request->image as $img){
+                if ($img != "") {
+                    $image = $img;
+                    $name = time() . '.' . $image->getClientOriginalExtension();
+                    $destinationPath = public_path('/assets/images/posts');
+                    $image->move($destinationPath, $name);
+                    $post_attachments = new PostAttachment();
+                    $post_attachments->type = "f";
+                    $post_attachments->value = $name;
+                    $post_attachments->post_id = $post_id;
+                    $post_attachments->save();
+                }
+            }
         }
         // flash message : durée de vie : 1 http request
         $request->session()->flash('status','Post is created !!');
-        return redirect()->route('dashboard.myPosts');
+        return redirect()->route('posts.show',$post_id);
     }
 
     /**

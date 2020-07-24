@@ -20,3 +20,11 @@ function createVideoInput() {
     inputVideo.setAttribute('value','');
     document.getElementById('videos').appendChild(inputVideo);
 }
+function createImageInput() {
+    let inputImage = document.createElement("input");
+    inputImage.setAttribute('type','file');
+    inputImage.setAttribute('name','image[]');
+    inputImage.setAttribute('class','form-control mt-1');
+    inputImage.setAttribute('value','');
+    document.getElementById('images').appendChild(inputImage);
+}
