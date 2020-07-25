@@ -7,20 +7,7 @@
             <hr>
             <form method="POST" action="{{route('dashboard.posts.store')}}" enctype="multipart/form-data">
                 @csrf
-                <fieldset>
-                    <legend>Article : </legend>
-                    <div class="form-group">
-                        <label for="title">Title:</label>
-                        <input class="form-control" type="text" id="title" name="title"
-                               value="{{ old('title',$post->title ?? null) }}" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description:</label>
-                        <textarea class="form-control" type="text" name="description" id="description" required>
-                            {{old('content',$post->description ?? null)}}
-                    </textarea>
-                    </div>
-                </fieldset>
+                @include('dashboard.posts.form')
                 <fieldset>
                     <legend>Evenement :</legend>
                     <div class="form-group">

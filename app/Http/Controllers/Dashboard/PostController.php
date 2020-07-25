@@ -120,27 +120,32 @@ class PostController extends Controller
         //
     }
 
+
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param int $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function edit(User $user)
+    public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('dashboard.posts.edit',[
+            'post'=> $post,
+        ]);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request,  $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->title = $request->input('title');
+        $post->description = $request->input('description');
+        $post->save();
+        $post_id  = $post->id;
+        return redirect()->route('posts.show',$post_id);
     }
 
     /**

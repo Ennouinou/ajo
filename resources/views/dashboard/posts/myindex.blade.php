@@ -24,7 +24,7 @@
                             <td width="20%">{{$post->title}}</td>
                             <td width="60%">{{$post->description}}</td>
                             <td width="20%">
-                                <button class="btn btn-warning">Edit</button>
+                                <a class="btn btn-warning" href="{{route('dashboard.posts.edit',['post'=>$post->id])}}">Edit</a>
                                 <button class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
