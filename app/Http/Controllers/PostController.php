@@ -9,7 +9,7 @@ use App\PostAttachment;
 class PostController extends Controller
 {
     public function index(){
-        $posts= Post::with('user')->orderBy('created_at','desc')->get();
+        $posts= Post::with('user')->latest()->get();
         return view('posts.index',[
             'posts' => $posts
         ]);

@@ -232,3 +232,21 @@ Home-NEWS
 .news {
     border-right: 1px solid  rgb(0, 159, 227) ;
 }
+/*
+Dashboard 
+ */
+.article {
+    background-image: url(../../images/post.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.my-fieldset{
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 2px 2px lightgray;
+    padding: 10px;
+}
+.bgwo{
+    background-color: rgba(255,255,255,0.7);
+}

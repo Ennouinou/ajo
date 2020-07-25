@@ -4,7 +4,7 @@
         <div class="card-body">
             <h4 class="card-title text-center">Modifier Cet Article</h4>
             <hr>
-            <form method="POST" action="{{route('dashboard.posts.update',['post'=>$post->id])}}" >
+            <form method="POST" action="{{route('dashboard.events.update',['event'=>$event->id])}}" >
                 @csrf
                 @method('PUT')
                 @include('dashboard.posts.form')
@@ -19,8 +19,7 @@
             </form>
         </div>
         <div class="card-footer d-flex align-items-center justify-content-between bgwo ">
-            <span class="small stretched-link orange" >Actualité écrite par : {{$post->user->name}}</span>
-            <div class="small orange">Le : {{$post->created_at}}</div>
+            <div class="small orange">Evénement aura lieu Le : {{$event->date}}</div>
         </div>
     </div>
 @endsection

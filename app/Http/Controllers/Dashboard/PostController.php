@@ -128,9 +128,14 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::find($id);
-        return view('dashboard.posts.edit',[
-            'post'=> $post,
-        ]);
+        if($post->user_id == Auth::user()->id || Auth::user()->role == 1){
+            return view('dashboard.posts.edit',[
+                'post'=> $post,
+            ]);
+        }
+        else{
+            return redirect()->route('dashboard.posts.index');
+        }
     }
 
     /**
@@ -149,13 +154,18 @@ class PostController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+        $attachments = PostAttachment::all()->where('post_id','=',$id);
+        foreach ($attachments as $attachment){
+            PostAttachment::destroy($attachment->id);
+            if($attachment->type == 'f')
+            unlink(public_path('/assets/images/posts/'.$attachment->value));
+        }
+        Post::destroy($id);
+        return redirect()->route('dashboard.posts.index');
     }
 }

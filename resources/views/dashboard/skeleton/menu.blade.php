@@ -19,8 +19,8 @@
                 </a>
                 <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                     <nav class="sb-sidenav-menu-nested nav">
-                        <a class="nav-link" href="#">Liste des événements</a>
-                        <a class="nav-link" href="#">Ajouter un événement</a>
+                        <a class="nav-link" href="/dashboard/events">Liste des événements</a>
+                        <a class="nav-link" href="{{route('dashboard.events.create')}}">Ajouter un événement</a>
                     </nav>
                 </div>
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts1" aria-expanded="false" aria-controls="collapseLayouts">
