@@ -8,7 +8,7 @@ use App\EventAttachment;
 class EventController extends Controller
 {
     public function index(){
-        $events = Event::orderBy('date','desc')->get();
+        $events= Event::with('attachments')->latest()->paginate(9);
         return view('events.index',[
             'events' => $events
         ]);

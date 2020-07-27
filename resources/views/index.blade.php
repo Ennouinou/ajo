@@ -104,11 +104,11 @@
                         <div class="timeline-badge" ><img src="{{URL::to('/')}}/assets/images/mini-logo.png" alt=""></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title">{{ $event->title }}</h4>
+                                <h4 class="timeline-title ">{{ $event->title }}</h4>
                                 <p><small class="text-muted"><i class="fa fa-calendar"></i> &nbsp {{ $event->date }} </small></p>
                             </div>
                             <div class="timeline-body">
-                                <p>{{$event->description}}</p>
+                                <p>{{substr($event->description,0,300)}}...</p>
                             </div>
                         </div>
                     </li>

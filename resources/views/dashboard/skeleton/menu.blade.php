@@ -44,7 +44,7 @@
                     <nav class="sb-sidenav-menu-nested nav">
                         <a class="nav-link" href="/dashboard/users">Liste des utilisateurs</a>
                         @if (Auth::user()->role == 1)
-                            <a class="nav-link" href="#">Ajouter un utilisateur</a>
+                            <a class="nav-link" href="{{route('dashboard.users.create')}}">Ajouter un utilisateur</a>
                         @endif
                     </nav>
                 </div>

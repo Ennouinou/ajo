@@ -45,9 +45,11 @@ Route::resource('/events','EventController');
 Route::resource('/posts','PostController');
 
 
-Auth::routes();
+Auth::routes(
+    ['verify' => true]
+);
 
-Route::get('/administration', 'HomeController@index')->name('dashboard');
+Route::get('/administration', 'HomeController@index')->name('dashboard')->middleware('verified');
 
 Route::namespace('Dashboard')->prefix('dashboard')->name('dashboard.')->group(function (){
     Route::resource('/events','EventController');

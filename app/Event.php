@@ -9,7 +9,7 @@ class Event extends Model
     protected $fillable = [
         'title', 'description','activity','date',
     ];
-    public function attatchements(){
+    public function attachments(){
         return $this->hasMany(EventAttachment::class);
     }
 

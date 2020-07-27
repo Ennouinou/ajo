@@ -32,7 +32,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.users.create');
     }
 
     /**

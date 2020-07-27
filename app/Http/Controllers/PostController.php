@@ -9,9 +9,9 @@ use App\PostAttachment;
 class PostController extends Controller
 {
     public function index(){
-        $posts= Post::with('user')->latest()->get();
+        $posts= Post::with('user','attachments')->latest()->paginate(9);
         return view('posts.index',[
-            'posts' => $posts
+            'posts' => $posts,
         ]);
     }
     public function show($id)

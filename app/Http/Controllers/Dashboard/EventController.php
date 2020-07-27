@@ -37,7 +37,6 @@ class EventController extends Controller
     {
         return view('dashboard.events.create');
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -49,11 +48,15 @@ class EventController extends Controller
         $validatedData = $request->validate([
             'title'=>'bail|required|min:4|max:100',
             'description'=>'required',
+            'date'=>'required',
         ]);
         // Create the event object and add it to the db :
         $event = new Event();
         $event->title = $request->input('title');
         $event->description = $request->input('description');
+        $event->activity = $request->activities;
+
+        $event->date = $request->date;
         $event->save();
         $event_id = $event->id;
         /*
@@ -130,9 +133,16 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validatedData = $request->validate([
+            'title'=>'bail|required|min:4|max:100',
+            'description'=>'required',
+            'date'=>'required',
+        ]);
         $event = Event::findOrFail($id);
         $event->title = $request->input('title');
         $event->description = $request->input('description');
+        $event->activity = $request->activities;
+        $event->date = $request->date;
         $event->save();
         $event_id  = $event->id;
         return redirect()->route('events.show',$event_id);

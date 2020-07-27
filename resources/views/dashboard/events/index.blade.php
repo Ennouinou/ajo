@@ -32,10 +32,10 @@
                             @if (Auth::user()->role == 1)
                                 <td width="15%" class="text-center">
                                     <a class="btn btn-warning" href="{{route('dashboard.events.edit',['event'=>$event->id])}}"><i class="fa fa-edit"></i></a>
-                                    <form class="d-inline" method="event" action="{{route('dashboard.events.destroy',['event'=>$event->id])}}" >
+                                    <form class="d-inline" method="POST" action="{{route('dashboard.events.destroy',['event'=>$event->id])}}" >
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" onclick="confirm('You sure about this ?')"><i class="fa fa-trash"></i></button>
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('You sure about this ?')"><i class="fa fa-trash"></i></button>
                                     </form>
                                 </td>
                             @endif

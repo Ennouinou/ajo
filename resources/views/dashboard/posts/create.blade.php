@@ -7,21 +7,21 @@
             <form method="POST" action="{{route('dashboard.posts.store')}}" enctype="multipart/form-data">
                 @csrf
                 @include('dashboard.posts.form')
-                <div class="my-fieldset mt-4 bgwo">
+                <div class="my-fieldset bgwo mt-4">
                     <legend class="purple">Atachements :</legend>
-                    <div class="form-group col-md-6">
-                        <label for="videos" >
-                            <span class="blue"> Videos :</span> <a class="btn btn-primary mt-1 bg-blue" onclick="createVideoInput()" ><i class="fa fa-plus "></i></a>
-                        </label>
-                        <span id="videos">
-                        </span>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="attachments" >
-                           <span class="blue">Images :</span> <a class="btn btn-primary mt-1 bg-blue" onclick="createImageInput()"><i class="fa fa-plus"></i></a>
-                        </label>
-                        <span id="images">
-                        </span>
+                    <div class="form-group d-flex">
+                        <div class="col-md-6">
+                            <label for="videos" >
+                                <span class="blue"> Videos :</span> <a class="btn btn-primary mt-1 bg-blue" onclick="createVideoInput()" ><i class="fa fa-plus "></i></a>
+                            </label>
+                            <span id="videos"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="attachments" >
+                                <span class="blue">Images :</span> <a class="btn btn-primary mt-1 bg-blue" onclick="createImageInput()"><i class="fa fa-plus"></i></a>
+                            </label>
+                            <span id="images"></span>
+                        </div>
                     </div>
                 </div>
                 <div class="my-fieldset mt-4 mb-4 bgwo">
@@ -42,13 +42,6 @@
                     </div>
                 </div>
 
-                @if ($errors->any())
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li class="text-danger">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                @endif
                 <button type="submit" class="btn btn-block btn-primary">Ajouter Actualité</button>
             </form>
         </div>

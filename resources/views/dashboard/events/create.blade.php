@@ -4,7 +4,7 @@
         <div class="card-body">
             <h4 class="card-title text-center orange">Ajouter Un Evénement</h4>
             <hr>
-            <form method="POST" action="{{route('dashboard.posts.store')}}" enctype="multipart/form-data">
+            <form method="POST" action="{{route('dashboard.events.store')}}" enctype="multipart/form-data">
                 @csrf
                 @include('dashboard.events.form')
                 <div class="my-fieldset bgwo mt-4">
@@ -24,15 +24,6 @@
                         </div>
                     </div>
                 </div>
-
-
-                @if ($errors->any())
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li class="text-danger">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                @endif
                 <button type="submit" class="btn btn-block btn-primary">Ajouter Evenement</button>
             </form>
         </div>

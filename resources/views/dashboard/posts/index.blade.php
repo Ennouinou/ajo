@@ -41,7 +41,7 @@
                                     <form class="d-inline" method="POST" action="{{route('dashboard.posts.destroy',['post'=>$post->id])}}" >
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" onclick="confirm('You sure about this ?')"><i class="fa fa-trash"></i></button>
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('You sure about this ?')"><i class="fa fa-trash"></i></button>
                                     </form>
                                 </td>
                             @endif
