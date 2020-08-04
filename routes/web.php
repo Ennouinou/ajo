@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     $now =Carbon::now();
     $events = Event::all()->where('date', '>=', $now->toDateTimeString());
-    $posts = Post::all()->take(5);
+    $posts = Post::orderBy('created_at','desc')->get()->take(4);
     return view('index',[
         'events' => $events,
         'posts'  => $posts,

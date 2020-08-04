@@ -9,7 +9,7 @@
             <aside class="col-md-4 sidebar sidebar-left">
                 <div class="row widget">
                     <div class="col-xs-12">
-                        <h4 class="small blue"> <i class="fa fa-calendar"></i> &nbsp {{$post->created_at}}</h4>
+                        <h4 class="small blue">&nbsp;<i class="fa fa-pencil"></i> Ecrit par : {{$post->user->name}} |  <i class="fa fa-calendar"></i> &nbsp; Le {{$post->created_at}}</h4>
                     </div>
                 </div>
                 @foreach($videos as $video)
@@ -32,19 +32,19 @@
                     </p>
                     <h1 class="page-title orange">{{$post->title}}</h1>
                 </header>
-                <p style="padding: 10px ;">{{$post->description}}</p>
+                <p style="padding: 10px ;  border-left: 1px solid lightgray">{{$post->description}}</p>
                 @if ($pictures->count() > 0)
                     <div id="myCarousel" class="carousel slide my-carousel"  data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
                             @foreach($pictures as $picture)
-                                <li data-target="#myCarouse{{$loop->index}}" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="{{$loop->index}}" class="active"></li>
                             @endforeach
                         </ol>
                         <div class="carousel-inner">
                             @foreach($pictures as $picture)
                                 <div class="item {{$loop->index == 0 ? 'active' : ''}} text-center" >
-                                    <img  src="{{URL::to('/')}}/assets/images/posts/{{$picture->value}}" alt="Image" >
+                                    <img  style="max-height: 650px;" src="{{URL::to('/')}}/assets/images/posts/{{$picture->value}}" alt="Image" >
                                 </div>
                             @endforeach
                         </div>

@@ -159,7 +159,6 @@ INDEX
 }
 .timeline-title {
     margin-top: 0;
-    color: inherit;
 }
 .timeline-body > p,
 .timeline-body > ul {
@@ -254,4 +253,16 @@ Dashboard
     max-height: 250px;
     display: block;
     margin: auto;
+}
+/*
+Blink
+ */
+.blink_me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }

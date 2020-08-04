@@ -31,8 +31,8 @@
                 </div>
             </div>
         @endforeach
-        <div  class="text-center">
-            {{$events->links()}}
-        </div>
+    </div>
+    <div  class="text-center">
+        {{$events->links()}}
     </div>
 @endsection

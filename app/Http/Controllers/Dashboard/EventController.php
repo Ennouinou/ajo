@@ -77,10 +77,12 @@ class EventController extends Controller
          * Images
          */
         if(is_array($request->image)){
+            $i = 0;
             foreach ($request->image as $img){
                 if ($img != "") {
+                    $i++;
                     $image = $img;
-                    $name = time() . '.' . $image->getClientOriginalExtension();
+                    $name = time() . $i . '.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('/assets/images/events');
                     $image->move($destinationPath, $name);
                     $event_attachments = new EventAttachment();

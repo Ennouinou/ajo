@@ -25,7 +25,7 @@
                 <div class="widget text-left">
                     <ul class="list-unstyled list-spaces">
                         @foreach($posts as $post)
-                            <li><a href="">{{$post->title}}</a><br><span class="small text-muted">{{$post->description}}</span></li>
+                            <li><a href="/posts/{{$post->id}}" class="blink_me">{{$post->title}}</a><br><span class="small text-muted">{{substr($post->description,0,200)}}</span></li>
                         @endforeach
                     </ul>
                 </div>
@@ -64,34 +64,45 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container ">
         <h2 class="text-center top-space orange">Nos activités généralement tournent autour des :</h2>
         <br>
-        <div class="row">
+        <div class="row" style="margin-bottom: 10px;">
             <div class="col-sm-6">
-                <h3 class="blue">Formations</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, iste, veritatis! Accusamus aliquam, cumque esse eveniet in minus, nemo officia omnis possimus quidem recusandae saepe sequi sit suscipit unde vitae?
-                </p>
+                <div class="my-fieldset">
+                    <h3 class="blue text-center">Formations</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, iste, veritatis! Accusamus aliquam, cumque esse eveniet in minus, nemo officia omnis possimus quidem recusandae saepe sequi sit suscipit unde vitae?
+                    </p>
+                </div>
+
             </div>
             <div class="col-sm-6">
-                <h3 class="purple">Activités Sociales</h3>
-                <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, beatae blanditiis consequuntur culpa dolores earum eius esse ex exercitationem explicabo labore, libero mollitia perferendis quo repellendus similique ut veniam.
-                </p>
+                <div class="my-fieldset">
+                    <h3 class="purple text-center">Activités Sociales</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto assumenda, beatae blanditiis consequuntur culpa dolores earum eius esse ex exercitationem explicabo labore, libero mollitia perferendis quo repellendus similique ut veniam.
+                    </p>
+                </div>
             </div>
         </div> <!-- /row -->
         <div class="row">
             <div class="col-sm-6">
-                <h3 class="blue">Activités Cultureles</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, debitis eaque est fuga laboriosam magnam natus necessitatibus nulla porro, praesentium quo, ratione reiciendis sapiente totam ut vel! Delectus, qui.
-                </p>
+                <div class="my-fieldset">
+                    <h3 class="blue text-center">Activités Cultureles</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem beatae, debitis eaque est fuga laboriosam magnam natus necessitatibus nulla porro, praesentium quo, ratione reiciendis sapiente totam ut vel! Delectus, qui.
+                    </p>
+                </div>
+
             </div>
-            <div class="col-sm-6">
-                <h3 class="purple">Activité Artistiques</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolore eius expedita laborum pariatur qui temporibus ut velit? Accusantium beatae dicta distinctio ipsum libero odit quia rem temporibus vitae.
-                </p>
+            <div class="col-sm-6 ">
+                <div class="my-fieldset">
+                    <h3 class="purple text-center">Activité Artistiques</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus at dolore eius expedita laborum pariatur qui temporibus ut velit? Accusantium beatae dicta distinctio ipsum libero odit quia rem temporibus vitae.
+                    </p>
+                </div>
+
             </div>
         </div>
         <div class="row">
@@ -104,7 +115,7 @@
                         <div class="timeline-badge" ><img src="{{URL::to('/')}}/assets/images/mini-logo.png" alt=""></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4 class="timeline-title ">{{ $event->title }}</h4>
+                                <h4 class="timeline-title orange blink_me" onclick="route('/events/{{$event->id}}')" style="cursor: pointer">{{ $event->title }}</h4>
                                 <p><small class="text-muted"><i class="fa fa-calendar"></i> &nbsp {{ $event->date }} </small></p>
                             </div>
                             <div class="timeline-body">

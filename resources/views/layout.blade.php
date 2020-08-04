@@ -22,7 +22,7 @@
     <script src="{{URL::to('/')}}/assets/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="home">
+<body class="home" onload="menuChange()">
 
 @include('skeleton.header')
 

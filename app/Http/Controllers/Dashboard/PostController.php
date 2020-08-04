@@ -90,10 +90,12 @@ class PostController extends Controller
          * Images
          */
         if(is_array($request->image)){
+            $i = 0;
             foreach ($request->image as $img){
                 if ($img != "") {
+                    $i++;
                     $image = $img;
-                    $name = time() . '.' . $image->getClientOriginalExtension();
+                    $name = time(). $i . '.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('/assets/images/posts');
                     $image->move($destinationPath, $name);
                     $post_attachments = new PostAttachment();

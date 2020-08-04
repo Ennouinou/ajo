@@ -28,3 +28,18 @@ function createImageInput() {
     inputImage.setAttribute('value','');
     document.getElementById('images').appendChild(inputImage);
 }
+
+function menuChange() {
+    let menu = window.location.href.split('/')[3];
+    if( menu === ''){
+        document.getElementById('home').classList.add('active')
+    }
+    else{
+        if(!menu.includes('?'))
+            document.getElementById(menu).classList.add('active');
+        else{
+            let menuI = menu.split('?')[0];
+            document.getElementById(menuI).classList.add('active');
+        }
+    }
+}
