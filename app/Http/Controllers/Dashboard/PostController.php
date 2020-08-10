@@ -19,7 +19,7 @@ class PostController extends Controller
     public function myIndex(){
         $user_id = Auth::id();
         $posts= Post::orderBy('created_at','desc')->where('user_id',$user_id)->get();
-        return view('dashboard.posts.myIndex',[
+        return view('dashboard.posts.myindex',[
             'posts' => $posts
         ]);
     }
