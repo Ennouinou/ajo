@@ -8,7 +8,7 @@
 
     <title>AJO</title>
 
-    <link rel="shortcut icon" href="{{URL::to('/')}}/assets/images/ajo-favicon.png">
+    <link rel="shortcut icon" href="{{URL::to('/public')}}/assets/images/ajo-favicon.png">
     <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{URL::to('/')}}/assets/css/font-awesome.min.css">
