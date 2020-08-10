@@ -12,14 +12,6 @@
                 <li id="events"><a href="/events" >Events</a></li>
                 <li id="posts"><a href="/posts" >News</a></li>
                 <li id="about"><a href="/about">About</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Pages <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="sidebar-left.blade.php">Left Sidebar</a></li>
-                        <li class="active"><a href="sidebar-right.blade.php">Right Sidebar</a></li>
-                    </ul>
-                </li>
-                <li id="contact"><a href="/contact" >Contact</a></li>
                 @if (!Auth::check())
                     <li><a class="btn" href="/login"><i class="fa fa-sign-in"></i> </a></li>
                 @else

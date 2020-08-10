@@ -12,26 +12,52 @@
     <div class="container text-center">
         <br>
         <div class="row">
-            <div class="col-md-8 news">
-                <br>
                 <h2 class="thin"><span class="purple">A</span><span class="blue">J</span><span class="orange">O</span></h2>
                 <p class="text-muted">
                     Association fondée dans le but d'améliorer tout travail associatif, artistique culturel et social en guise de venir en aide à tous les jeunes.
                 </p>
-                <iframe width="90%" height="315" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <aside class="col-md-4 sidebar sidebar-right " >
-                <h2 class="thin orange">Dernières Actualités</h2>
-                <div class="widget text-left">
-                    <ul class="list-unstyled list-spaces">
-                        @foreach($posts as $post)
-                            <li><a href="/posts/{{$post->id}}" class="blink_me">{{$post->title}}</a><br><span class="small text-muted">{{substr($post->description,0,200)}}</span></li>
-                        @endforeach
-                    </ul>
-                </div>
-            </aside>
+                <iframe width="80%" height="400" src="https://www.youtube.com/embed/hYDrPVbNxWM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-
+        <div class="row">
+            <h2 class="thin orange">Dernières Actualités</h2>
+            <div id="myCarousel" class="carousel slide news-carousel"  data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    @foreach($posts as $post)
+                        <li data-target="#myCarousel" data-slide-to="{{$loop->index}}" class="active"></li>
+                    @endforeach
+                </ol>
+                <div class="carousel-inner">
+                   @foreach($posts as $post)
+                        <div class="item {{$loop->index == 0 ? 'active' : ''}} text-center" >
+                            <?php $image = true ?>
+                        @foreach($post->attachments as $attachment)
+                                @if($attachment->type == 'f')
+                                    <?php $image = false ?>
+                                    <img class="card-img-top center-image-en" style="opacity: 0.6" src="{{URL::to('/')}}/assets/images/posts/{{$attachment->value}}" alt="">
+                                    @break
+                                @endif
+                            @endforeach
+                            @if ($image)
+                                <img class="card-img-top center-image-en" style="opacity: 0.6" src="{{URL::to('/')}}/assets/images/logo.png" alt="">
+                            @endif
+                            <div class="carousel-caption" style="background-color: rgba(255,255,255,0.4);">
+                                <h3 class="blue " style="cursor: pointer" onclick="route('/posts/{{$post->id}}')"> {{$post->title}}</h3>
+                                <p class="orange">{{substr($post->description,0,50)}}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="fa fa-chevron-left" style="margin-top: 50%;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="fa fa-chevron-right" style="margin-top: 50%;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="jumbotron top-space">
         <div class="container">

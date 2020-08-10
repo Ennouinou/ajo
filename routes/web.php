@@ -16,24 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function(){
-    $now =Carbon::now();
-    $events = Event::all()->where('date', '>=', $now->toDateTimeString());
-    $posts = Post::orderBy('created_at','desc')->get()->take(4);
-    return view('index',[
-        'events' => $events,
-        'posts'  => $posts,
-    ]);
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::get('/','VisitorController@home');
+Route::get('/about','VisitorController@about');
 Route::get('/administration', function () {
     return view('dashboard.index');
 });

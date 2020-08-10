@@ -228,9 +228,13 @@ Counter
 /*
 Home-NEWS
  */
-.news {
-    border-right: 1px solid  rgb(0, 159, 227) ;
+.news-carousel {
+    max-width: 90%;
+    margin-left: 5%;
+    background-color: white;
+    margin-top: 50px;
 }
+
 /*
 Dashboard 
  */
