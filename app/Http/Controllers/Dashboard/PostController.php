@@ -95,7 +95,7 @@ class PostController extends Controller
                 if ($img != "") {
                     $i++;
                     $image = $img;
-                    $name = $image->getClientOriginalName().$i;
+                    $name =  $i . '-' . $image->getClientOriginalName();
                     $destinationPath = public_path('/assets/images/events/'.$post_id );
                     $image->move($destinationPath, $name);
                     $post_attachments = new PostAttachment();

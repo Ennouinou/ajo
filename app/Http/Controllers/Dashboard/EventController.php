@@ -82,7 +82,7 @@ class EventController extends Controller
                 if ($img != "") {
                     $i++;
                     $image = $img;
-                    $name = $image->getClientOriginalName().$i;
+                    $name = $i . '-' . $image->getClientOriginalName();
                     $destinationPath = public_path('/assets/images/events/'.$event_id );
                     $image->move($destinationPath, $name);
                     $event_attachments = new EventAttachment();
