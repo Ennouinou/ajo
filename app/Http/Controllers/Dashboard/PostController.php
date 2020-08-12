@@ -95,8 +95,8 @@ class PostController extends Controller
                 if ($img != "") {
                     $i++;
                     $image = $img;
-                    $name = time(). $i . '.' . $image->getClientOriginalExtension();
-                    $destinationPath = public_path('/assets/images/posts');
+                    $name = $image->getClientOriginalName().$i;
+                    $destinationPath = public_path('/assets/images/events/'.$post_id );
                     $image->move($destinationPath, $name);
                     $post_attachments = new PostAttachment();
                     $post_attachments->type = "f";

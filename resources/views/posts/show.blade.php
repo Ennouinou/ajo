@@ -44,7 +44,7 @@
                         <div class="carousel-inner">
                             @foreach($pictures as $picture)
                                 <div class="item {{$loop->index == 0 ? 'active' : ''}} text-center" >
-                                    <img  style="max-height: 650px;" src="/assets/images/posts/{{$picture->value}}" alt="Image" >
+                                    <img  style="max-height: 650px;" src="/assets/images/posts/{{$post->id}}/{{$picture->value}}" alt="Image" >
                                 </div>
                             @endforeach
                         </div>
