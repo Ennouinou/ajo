@@ -13,12 +13,12 @@
                 @foreach($event->attachments as $attachment)
                     @if($attachment->type == 'f')
                         <?php $image = false ?>
-                        <img class="card-img-top center-image-en"  src="{{URL::to('/')}}/assets/images/events/{{$attachment->value}}" alt="">
+                        <img class="card-img-top center-image-en"  src="/assets/images/events/{{$attachment->value}}" alt="">
                         @break
                     @endif
                 @endforeach
                 @if ($image)
-                    <img class="card-img-top center-image-en"  src="{{URL::to('/')}}/assets/images/logo.png" alt="">
+                    <img class="card-img-top center-image-en"  src="/assets/images/logo.png" alt="">
                 @endif
                 <div class="card-body">
                     <h4 class="card-title blue text-center">{{$event->title}}  <br>  <br>

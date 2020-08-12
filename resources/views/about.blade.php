@@ -37,7 +37,7 @@
                 <div class="row" >
                     <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
                         <div class="avatar mx-auto">
-                            <img src="{{URL::to('/')}}/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
+                            <img src="/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
                                  alt="Photo of ">
                         </div>
                         <h5 class="font-weight-bold mt-4 mb-3">test</h5>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="col-lg-3 col-md-6 mb-lg-0 mb-5">
                         <div class="avatar mx-auto">
-                            <img src="{{URL::to('/')}}/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
+                            <img src="/assets/images/douich.jpg" class="rounded-circle z-depth-1 w-50"
                                  alt="Photo of ">
                         </div>
                         <h5 class="font-weight-bold mt-4 mb-3">test</h5>

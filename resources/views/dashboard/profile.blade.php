@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="card col-10" style="margin-left: 8.33%;">
-                <img class="card-img-top mt-2" src="{{URL::to('/')}}/assets/images/users/douich.jpg" alt="">
+                <img class="card-img-top mt-2" src="/assets/images/users/douich.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title text-center">{{$user->name}} </h4>
                     <div class="row form-group" >

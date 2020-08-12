@@ -28,7 +28,7 @@
             <article class="col-md-8 maincontent">
                 <header class="page-header">
                     <p class="text-right">
-                        <img src="{{URL::to('/')}}/assets/images/mini-logo.png" alt="">
+                        <img src="/assets/images/mini-logo.png" alt="">
                     </p>
                     <h1 class="page-title orange">{{$post->title}}</h1>
                 </header>
@@ -44,7 +44,7 @@
                         <div class="carousel-inner">
                             @foreach($pictures as $picture)
                                 <div class="item {{$loop->index == 0 ? 'active' : ''}} text-center" >
-                                    <img  style="max-height: 650px;" src="{{URL::to('/')}}/assets/images/posts/{{$picture->value}}" alt="Image" >
+                                    <img  style="max-height: 650px;" src="/assets/images/posts/{{$picture->value}}" alt="Image" >
                                 </div>
                             @endforeach
                         </div>

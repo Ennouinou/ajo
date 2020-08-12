@@ -13,12 +13,12 @@
             @foreach($post->attachments as $attachment)
                     @if($attachment->type == 'f')
                         <?php $image = false ?>
-                        <img class="card-img-top center-image-en"  src="{{URL::to('/')}}/assets/images/posts/{{$attachment->value}}" alt="">
+                        <img class="card-img-top center-image-en"  src="/assets/images/posts/{{$attachment->value}}" alt="">
                         @break
                     @endif
                 @endforeach
                 @if ($image)
-                        <img class="card-img-top center-image-en" src="{{URL::to('/')}}/assets/images/logo.png" alt="">
+                        <img class="card-img-top center-image-en" src="/assets/images/logo.png" alt="">
                 @endif
                 <div class="card-body">
                     <h4 class="card-title blue text-center">{{$post->title}} <br>  <br>

@@ -34,12 +34,12 @@
                         @foreach($post->attachments as $attachment)
                                 @if($attachment->type == 'f')
                                     <?php $image = false ?>
-                                    <img class="card-img-top center-image-en" style="opacity: 0.6" src="{{URL::to('/')}}/assets/images/posts/{{$attachment->value}}" alt="">
+                                    <img class="card-img-top center-image-en" style="opacity: 0.6" src="/assets/images/posts/{{$attachment->value}}" alt="">
                                     @break
                                 @endif
                             @endforeach
                             @if ($image)
-                                <img class="card-img-top center-image-en" style="opacity: 0.6" src="{{URL::to('/')}}/assets/images/logo.png" alt="">
+                                <img class="card-img-top center-image-en" style="opacity: 0.6" src="/assets/images/logo.png" alt="">
                             @endif
                             <div class="carousel-caption" style="background-color: rgba(255,255,255,0.4);">
                                 <h3 class="blue " style="cursor: pointer" onclick="route('/posts/{{$post->id}}')"> {{$post->title}}</h3>
@@ -138,7 +138,7 @@
             <ul class="timeline">
             @foreach($events as $event)
                     <li class="{{$loop->index%2 == 0 ? '' : 'timeline-inverted'}}">
-                        <div class="timeline-badge" ><img src="{{URL::to('/')}}/assets/images/mini-logo.png" alt=""></div>
+                        <div class="timeline-badge" ><img src="/assets/images/mini-logo.png" alt=""></div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4 class="timeline-title orange blink_me" onclick="route('/events/{{$event->id}}')" style="cursor: pointer">{{ $event->title }}</h4>
@@ -156,7 +156,7 @@
             </ul>
         </div>
         <div class="jumbotron top-space douich">
-            <img  src="{{URL::to('/')}}/assets/images/douich.jpg" alt="">
+            <img  src="/assets/images/douich.jpg" alt="">
             <blockquote class="quote"> <i class="fa fa-quote-left blue"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. A assumenda at, cupiditate dolorem explicabo id unde. A alias blanditiis, ea eaque et explicabo iusto nemo nesciunt nihil sint vel voluptas?</blockquote>
             <p class="text-right"><a class="btn bg-purple orange index-image-button">Membres du bureau »</a></p>
         </div>
