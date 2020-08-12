@@ -13,7 +13,7 @@
                 @foreach($event->attachments as $attachment)
                     @if($attachment->type == 'f')
                         <?php $image = false ?>
-                        <img class="card-img-top center-image-en"  src="/assets/images/events/{{$attachment->value}}" alt="">
+                        <img class="card-img-top center-image-en"  src="/assets/images/events/{{$event->id}}/{{$attachment->value}}" alt="">
                         @break
                     @endif
                 @endforeach
